@@ -1,0 +1,327 @@
+@CHARSET "UTF-8";
+
+/* main menu */
+*{margin:0;padding:0;}:focus,:active {outline:0}ul,ol{list-style:none}h1,h2,h3,h4,h5,h6,pre,code {font-weight: normal; color: #000; font-size:1em;}a img{border:0} 
+
+#menu { margin: 0 0 25px; }
+#menu li  { display: inline; }
+#menu li a { background-image: url("/img/fondo.JPG"); float: lefts; text-transform: uppercase; font-size: .9em; color: #000; font-weight: bold; margin: 1em 0;
+  padding: 0.3em;
+  border-bottom: 1em solid black;  }
+#menu li a:hover { color: #000; }
+
+#pitch { border-bottom: 1px solid #ddd; margin: right; padding: 30px 40px 15px 15px; }
+#pitch p { font-size: 1.04em; }
+a { text-decoration: none; color: #2D648A; }
+a:hover, a:focus { color: #000; }
+
+
+select[multiple] {
+    min-height:150px;
+    background: none;
+}
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 0.5em;
+}
+
+.date select,
+.time select,
+.datetime select {
+    display: inline;
+    width: auto;
+    margin-right: 10px;
+}
+ul.pagination li a {
+    color: rgba(0, 0 ,0 , 0.54);
+}
+
+ul.pagination li.active a {
+    background-color: #DCE47E;
+    color: #FFF;
+    font-weight: bold;
+    cursor: default;
+}
+ul.pagination .disabled:hover a {
+    background: none;
+}
+
+.paginator {
+    text-align: center;
+}
+
+.paginator ul.pagination li {
+    float: none;
+    display: inline-block;
+}
+
+.paginator p {
+    text-align: right;
+    color: rgba(0, 0 ,0 , 0.54);
+}
+.view .columns.dates {
+    border-radius: 3px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+    margin-right:0.7rem;
+    background-color:#DCE47E;
+    color: #fff;
+}
+.view .numbers .subheader, .view .dates .subheader {
+    color:#747474;
+}
+
+body{
+  padding-left: 11em;
+  font: 15px 'trebuchet MS', 'lucida sans';
+  font-size:11pt;
+  <!--  -->
+  background-image: url("//img/fondo2.JPG");
+}
+code{
+  background-color: #ECF1F7;
+  color: #008000; 
+  padding-left: 7px;
+  padding-right: 7px;
+  border:1px solid #ffc0cb;
+}
+  
+input[type=submit],input[type=reset]{
+  background-color: #003380;
+  color: white;
+  border: none;
+  width: 110px;
+  height: 33px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type=text],select{
+  color: #003380;
+}
+
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 5em;
+  left: 1em;
+  width: 9em 
+}
+
+h1{
+  font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif; 
+}
+
+ul.navbar li{
+  background-image: url("/img/fondo.JPG");
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border-right: 1em solid black; 
+}
+li#logout{
+  background-color:#ffd5d5;
+  color:#550000;
+}
+
+li#login {
+  background-color:#d5d5ff;
+  color:#000080;
+}
+
+ul.navbar a{
+  text-decoration: none; 
+}
+
+ul.navbar a:link{
+  color: black; 
+}
+
+ul.navbar a:visited{
+  color: black;
+}
+
+ul.navbar a:link {
+    text-decoration: none;
+}
+
+address{
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted;
+}
+
+div#fotos, div#enlaces, div#pie{
+  clear:left;
+  float:left;
+}
+
+ol.rounded-list {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+
+ol.rounded-list ol {
+    margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+ol.rounded-list, ul.descripcion {
+  clear:left;
+  float:left;
+}
+
+ul.descripcion li{
+    padding-top: 3px;    
+}
+
+ol.rounded-list li a{
+    font-style:normal;
+    position: relative;
+    display: block;
+    padding: 1em 1em 1em 5em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #000000;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .5s ease-out;   
+}
+
+ol.rounded-list li a:hover{
+    background: #eee;
+}
+
+ol.rounded-list li a:before{
+  color:white;
+  font-style:normal;
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.6em;
+    background: #000000;
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 2.5em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .5s ease-out;
+}
+ol.rounded-list ol{
+    list-style: none;
+    font-family: "Courier";
+    font-style: normal;
+}
+ol.rounded-list ol li a:before {
+    content: url("Folder-Archive-zip-icon.png");
+    background: none;
+    border: none;
+    left: 0.5em;
+}
+
+ol.rounded-list ol li a {
+    background-color: #ffc0cb;
+    
+}
+ol.rounded-list ol li a:hover {
+    background-color: #ffec00;
+}
+ol.rounded-list ol a:visited {
+    background-color: #90ee90;
+}
+
+div#form{
+  float: left;
+  width:auto;
+  height:auto;
+  margin:10px;
+   background-image: url("/img/fondo.JPG");
+}
+fieldset{
+  border: 2px solid black;
+  weigth:auto;
+  heigth:auto;
+  clear:left;
+  float:left;
+   background-image: url("/img/fondo.JPG");
+}
+legend{
+  border: 1px solid black;
+  background-color: black;
+  color:white;
+
+}
+div#formulario{
+  background-image: url("/img/fondo.JPG");
+  padding:10px;
+  weigth:auto;
+  heigth:auto;
+  clear:left;
+  float:left;
+}
+div.fila{
+  padding:5px;
+  clear:left;
+  float:left; 
+  width:auto;
+  heigth:auto;
+  margin:5px;
+  background-image: url("/img/fondo.JPG");
+}
+div.etiqueta{
+  clear:left;
+  float:left;
+  width:200px;
+  heigth:auto;  
+  background-image: url("/img/fondo.JPG");
+}
+div.control{
+  float:left; 
+   background-image: url("/img/fondo.JPG");
+}
+div#action{
+  float:left;
+  margin-left:200px;  
+}
+p{
+  clear:left;
+}
+.Table{  
+  display: table;
+  clear: left;
+  float:left;
+ }  
+.Title{  
+  display: table-caption;  
+  text-align: center;  
+  font-weight: larger;  
+  font-size: larger;
+   background-color: url("/img/fondo.JPG");  
+}  
+.Heading{  
+display: table-row;  
+font-weight: bold;  
+text-align: center;  
+background-color: plum;
+}  
+.Row{  
+  display: table-row;  
+}  
+.Cell{  
+  display: table-cell;  
+  border: solid;  
+  border-width: thin;  
+  padding-left: 5px;  
+  padding-right: 5px;  
+}
