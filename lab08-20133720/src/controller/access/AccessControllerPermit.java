@@ -14,9 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.appengine.api.users.UserServiceFactory;
 
 import controller.PMF;
-
-
-
+// clase que almacena el m√©todo para evaluar los permisos que tiene el usuario logeado, y en base a ello permitir o no el acceso a determinado servlet
 	@SuppressWarnings("serial")
 	public class AccessControllerPermit extends HttpServlet{
 		@SuppressWarnings("unchecked")
@@ -36,7 +34,7 @@ import controller.PMF;
 				List<model.entity.User> uSearch = (List<model.entity.User>) pm.newQuery(query).execute();
 				
 				if(uSearch.isEmpty()){
-					error ="El correo logeado no est· registrado como usuario";
+					error ="El correo logeado no est√° registrado como usuario";
 					req.setAttribute("error", error);
 					RequestDispatcher despachador = req.getRequestDispatcher("/WEB-INF/Views/Errors/deny1.jsp");
 					despachador.forward(req, resp);
@@ -48,7 +46,7 @@ import controller.PMF;
 							" && status==true";
 					List<model.entity.Resource> rSearch = (List<model.entity.Resource>) pm.newQuery(query2).execute();
 				if(rSearch.isEmpty()){
-					error="El recurso no est· enpadronado";
+					error="El recurso no est√° enpadronado";
 					req.setAttribute("error", error);
 					RequestDispatcher despachador = req.getRequestDispatcher("/WEB-INF/Views/Errors/deny1.jsp");
 					despachador .forward(req, resp);
@@ -59,7 +57,7 @@ import controller.PMF;
 							" && status==true";
 					List<model.entity.Access> aSearch = (List<model.entity.Access>) pm.newQuery(query3).execute();
 				if(aSearch.isEmpty()){
-					error="El acceso no est· enpadronado";
+					error="El acceso no est√° enpadronado";
 					req.setAttribute("error", error);
 					RequestDispatcher despachador = req.getRequestDispatcher("/WEB-INF/Views/Errors/deny1.jsp");
 					despachador .forward(req, resp);
