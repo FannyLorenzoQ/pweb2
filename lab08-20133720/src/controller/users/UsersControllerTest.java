@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.entity.*;
 import controller.*;
 
+//Servlet que inicializa la aplicación con los accesos que un administrador debe tener
 @SuppressWarnings("serial")
 public class UsersControllerTest<E> extends HttpServlet {
 	@SuppressWarnings("unchecked")
@@ -89,14 +90,14 @@ public class UsersControllerTest<E> extends HttpServlet {
 		// creando los accesos
 		Query re = pm.newQuery(model.entity.Resource.class); // es estooo
 		Query ro = pm.newQuery(model.entity.Role.class);
-		List<Resource> recursosA�adidos = (List<Resource>) re.execute();
-		List<Role> rolesA�adidos = (List<Role>) ro.execute();
+		List<Resource> recursosAñadidos = (List<Resource>) re.execute();
+		List<Role> rolesAñadidos = (List<Role>) ro.execute();
 		try{
 		// creando los accesos necesarios
 		// ArrayList<Access> accesos = new ArrayList<Access>();
 		
-			for(Resource a: recursosA�adidos)
-				pm.makePersistent(new Access(rolesA�adidos.get(0).getRoleId(),a.getResourceId()));
+			for(Resource a: recursosAñadidos)
+				pm.makePersistent(new Access(rolesAñadidos.get(0).getRoleId(),a.getResourceId()));
 		
 		}catch(Exception e){
 			System.out.println("erro en creacion de accesos" + e);
